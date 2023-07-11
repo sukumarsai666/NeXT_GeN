@@ -1,0 +1,896 @@
+
+<!--
+Done By : Zameeruddin.
+Date : 10/02/2017.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      
+        NeXT GEN
+      
+    </title>
+    <link rel="icon" type="image/icon" href="N4.ico">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+    <link href="assets/css/toolkit-inverse.css" rel="stylesheet">  
+	<link href="https://fonts.googleapis.com/css?family=Exo|Sansita" rel="stylesheet">   
+    <link href="assets/css/application.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <style>
+	  @import url(http://fonts.googleapis.com/css?family=Concert+One);
+	  
+	  
+      body 
+	  {
+        width: 1px;
+        min-width: 100%;
+        *width: 100%;
+      }
+	  
+	  #form-search 
+	  {
+	  
+		float : right;
+		padding-top : 8px  !important;
+		padding-right : 20px  !important;
+	  
+	  }
+	  
+	  #btn_search 
+	  {
+		width : 260px !important;
+		position : relative;
+		right : -44px;
+		z-index : 0;
+		height : 37px !important;
+	  }
+	  
+	  #btn_search_real
+	  {
+		z-index : 1;
+	  }
+	  
+	  #btn_search_real :hover 
+	  {
+		color : #17AA1C;
+	  }	  
+	  .quote1 
+	  {	
+		border : 1px #a31aff solid;
+		background-color: #a31aff !important;
+		border-radius : 13px;
+		padding : 10px;
+		width : 97%;
+		position : relative;
+		left : +10px;
+		font-weight: 700;
+
+	  }
+		
+	  #quote2 
+	  {
+		border : 1px #a31aff  solid !important;
+		background-color: #a31aff !important;
+	  }
+	  
+	  #Animate
+	  {
+		width : 275px;
+		height : 252px;
+	  }
+	  
+	  .card-title 
+	  {
+		text-align : center !important;
+	  }
+	  
+	  .card-text 
+	  {
+		text-align : center !important;
+	  }
+	  
+	  .btn-primary 
+	  {
+		margin-left : 34% !important;	  
+	  }
+	  
+	  h1 
+	  {
+		  border-radius: 15px;
+		  border: 1px solid silver;
+		  padding:15px 15px 15px 15px;
+		  display:block;
+		  line-height:1.5;
+		  font:900 8em 'Concert One', sans-serif;
+		  text-transform:uppercase;
+		  position:absolute;
+		  color:#0a0a0a;
+		  animation:glow 10s ease-in-out infinite;
+		  width : 220px !important; 
+		  height : 175px !important;
+	  }	  
+	  .anime 
+	  {
+		  margin-left : 75px;
+		  margin-top : 25px;
+		  width : 220px !important; 
+		  height : 250px !important;
+		  animation:wobble 5s ease-in-out infinite;
+		  transform-origin:center center;
+		  transform-style:preserve-3d;
+		  text-align : center !important;  
+      }
+	@keyframes wobble 
+	{
+	  0%,100%{ transform:rotate3d(1,1,0,40deg); }
+	  25%{ transform:rotate3d(-1,1,0,40deg); }
+	  50%{ transform:rotate3d(-1,-1,0,40deg); }
+	  75%{ transform:rotate3d(1,-1,0,40deg);  }	
+	}
+	@keyframes glow 
+	{
+	  0%,100%{ text-shadow:0 0 30px purple; }
+	  25%{ text-shadow:0 0 30px orange; }
+	  50%{ text-shadow:0 0 30px forestgreen; }
+	  75%{ text-shadow:0 0 30px silver; }	
+	}
+	h1:nth-child(2){ transform:translateZ(5px); }
+	h1:nth-child(3){ transform:translateZ(10px);}
+	h1:nth-child(4){ transform:translateZ(15px); }
+	h1:nth-child(5){ transform:translateZ(20px); }
+	h1:nth-child(6){ transform:translateZ(25px); }
+		
+	  #footer
+	  {
+		width : 100%;
+		height : 40px;
+		position : absolute;
+	  }
+	  small
+	  {
+		font-family:"Century Gothic";
+	  }	  
+	  canvas
+	  {
+		   width : 100%;
+		   height : 400px;
+		   margin: 0 0 0px 0;
+		   padding: 0;
+		   display:block;
+		   border-radius : 0 0 75% 75%;
+	  }
+		#title3 
+		{	
+			position : relative;
+			top : -325px;
+			font-family: "Avant Garde", Avantgarde, "Century Gothic", 'Sansita', 'Concert One', 'Century Gothic';
+			font-size : 75px;
+			text-align : center;
+		}
+		.quotes 
+		{
+			font-weight : bold;
+			font-size : 20px;
+		}		
+	.name {   
+  display:inline-block;
+  transform: rotate(-15deg)
+ }		
+		.content {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  font-size: 120%;
+  line-height: 40px;
+  font-family: 'Lato', sans-serif;
+  color: #ecf0f1;
+  height: 160px;
+  overflow:hidden;
+  margin-top: 60px;
+}
+.visible {
+  font-weight:600;
+  overflow:hidden;
+  height:50px;
+  padding:2px 40px;
+
+ 
+  &:after, &:before {
+    position:absolute;
+    top:0; 
+    font-size:22px;
+    -webkit-animation-name: opacity;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: opacity;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+}
+#Hello {
+  display:inline;
+  float:left;
+  margin:0;
+  color: #B9D748 ;
+}
+#updown {
+  margin-top:0;
+  padding-left:65px;
+  text-align:left;
+  list-style:none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  color:#CBE32D ;
+}
+#updown .downup {
+  line-height:40px;
+  margin:0;
+}
+@-webkit-keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@-webkit-keyframes change {
+  0%, 12%, 100% {transform:translateY(0);}
+  17%,29% {transform:translateY(-25%);}
+  34%,46% {transform:translateY(-50%);}
+  51%,63% {transform:translateY(-75%);}
+  68%,80% {transform:translateY(-50%);}
+  85%,97% {transform:translateY(-25%);}
+}
+
+@keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@keyframes change {
+  0%, 12%, 100% {transform:translateY(0);}
+  17%,29% {transform:translateY(-25%);}
+  34%,46% {transform:translateY(-50%);}
+  51%,63% {transform:translateY(-75%);}
+  68%,80% {transform:translateY(-50%);}
+  85%,97% {transform:translateY(-25%);}
+}
+ .deepshadow {
+    color: #e0dfdc;
+    letter-spacing: .1em;
+    text-shadow: 
+      0 -1px 0 #ffffff, 
+      0 1px 0 orange, 
+      0 2px 0 green, 
+      0 3px 0 blue, 
+      0 4px 0 purple, 
+      0 5px 0 #262626, 
+      0 6px 0 #242424, 
+      0 7px 0 #222, 
+      0 8px 0 #202020, 
+      0 9px 0 #1e1e1e, 
+      0 10px 0 #1c1c1c, 
+      0 11px 0 #1a1a1a, 
+      0 12px 0 #181818, 
+      0 13px 1px silver, 
+      0 14px 0 purple, 
+      0 22px 30px rgba(0, 0, 0, 0.9);
+  } 
+  /* Main styles */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+.text {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+  font: 250px Open Sans, Impact;
+  text-transform: uppercase;
+}
+.text:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+.text2 {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke2 6s infinite linear;
+  animation: stroke 6s infinite linear;
+  font: 250px Open Sans, Impact;
+  text-transform: uppercase;
+}
+.text2:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text2:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text2:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text2:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text2:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+@-webkit-keyframes stroke2 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke2 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}  
+  .text3 {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke3 6s infinite linear;
+  animation: stroke 6s infinite linear;
+  font: 250px Open Sans, Impact;
+  text-transform: uppercase;
+}
+.text3:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text3:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text3:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text3:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text3:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke3 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke3 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+.text4 {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke4 6s infinite linear;
+  animation: stroke 6s infinite linear;
+  font: 250px Open Sans, Impact;
+  text-transform: uppercase;
+}
+.text4:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text4:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text4:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text4:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text4:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke4 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke4 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+.text5 {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke5 6s infinite linear;
+  animation: stroke 6s infinite linear;
+  font: 250px Open Sans, Impact;
+  text-transform: uppercase;
+}
+.text5:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text5:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text5:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text5:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text5:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke5 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke5 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+.text6 {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke6 6s infinite linear;
+  animation: stroke 6s infinite linear;
+  font: 250px Open Sans, Impact;
+  text-transform: uppercase;
+}
+.text6:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text6:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text6:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text6:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text6:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke6 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke6 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}	  
+    </style>
+  </head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand navbar-brand-emphasized" href="index.html">
+          <span class="icon icon-leaf navbar-brand-icon"></span>
+          NeXT GEN
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">		
+		<ul class="nav navbar-nav">
+          <li class="active">
+            <a href="index.html">Home</a>
+          </li>
+          <li >
+            <a href="Subject.html">Courses</a>
+          </li>
+          <li >
+            <a href="CodePlayer.html">Code Player</a>
+          </li>
+          <li >
+            <a href="About_Us.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ <canvas id="c">
+ 
+ </canvas>
+ 
+ 
+<h2 class="deepshadow deallogo" id="title3">Ne<span class="name">X</span>T G<span>E</span>N</h2>
+
+
+
+<div class="content">
+ <div class="visible"> 
+      <p id="Hello">Love to </p>
+    <ul id="updown">
+      <li class="downup">Learn <img src="Learn2.ico"></li>
+       <li class="downup">be Creative <img src="Icon11.ico"></li>
+      <li class="downup">Make <img src="Icon7.ico"></li> 
+      <li class="downup">Achieve <img src="Icon3.ico"></li>
+	</ul>
+ </div>
+</div>
+
+
+<div class="container SIZ">
+	
+	
+  <div class="card card-inverse card-primary mb-3 text-center quote1">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Develop a passion for learning. If you do, you will never cease to grow.</p>
+      <footer>Anthony J. D'Angelo<cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div>
+
+</div>
+
+	<br><br><br><br>
+
+	<div class="container">
+		<div class="row">
+		  <div class="col-sm-4" id="first_card">
+			<div class="card">
+
+			<svg viewBox="0 0 600 300">
+  <!-- Symbol-->
+  <symbol id="s-text2">
+    <text text-anchor="middle" x="50%" y="50%" dy=".35em">CP</text>
+  </symbol>
+  <!-- Duplicate symbols-->
+  <use class="text2" xlink:href="#s-text2"></use>
+  <use class="text2" xlink:href="#s-text2"></use>
+  <use class="text2" xlink:href="#s-text2"></use>
+  <use class="text2" xlink:href="#s-text2"></use>
+  <use class="text2" xlink:href="#s-text2"></use>
+</svg>
+
+			  <div class="card-block">
+				<h3 class="card-title">Computer Science Engg.</h3>
+				<p class="card-text">“Education is the kindling of a flame, not the filling of a vessel.”</p>
+				<a href="#" class="btn btn-primary">Get Note</a>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-sm-4">
+			<div class="card">
+
+			<a href="Subject.html">
+			<svg viewBox="0 0 600 300">
+  <!-- Symbol-->
+  <symbol id="s-text">
+    <text text-anchor="middle" x="50%" y="50%" dy=".35em">CN</text>
+  </symbol>
+  <!-- Duplicate symbols-->
+  <use class="text" xlink:href="#s-text"></use>
+  <use class="text" xlink:href="#s-text"></use>
+  <use class="text" xlink:href="#s-text"></use>
+  <use class="text" xlink:href="#s-text"></use>
+  <use class="text" xlink:href="#s-text"></use>
+</svg>
+</a>
+			  <div class="card-block">
+				<h3 class="card-title">Communication Engg.</h3>
+				<p class="card-text">“Education is not the filling of a pail, but the lighting of a fire.”</p>
+				<a href="Subject.html" class="btn btn-primary">Get Notes</a>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-sm-4">
+			<div class="card">
+			
+				<a href="Subject.html">		<svg viewBox="0 0 600 300">
+  <!-- Symbol-->
+  <symbol id="s-text3">
+    <text text-anchor="middle" x="50%" y="50%" dy=".35em">ES</text>
+  </symbol>
+  <!-- Duplicate symbols-->
+  <use class="text3" xlink:href="#s-text3"></use>
+  <use class="text3" xlink:href="#s-text3"></use>
+  <use class="text3" xlink:href="#s-text3"></use>
+  <use class="text3" xlink:href="#s-text3"></use>
+  <use class="text3" xlink:href="#s-text3"></use>
+</svg></a>
+			
+			  <div class="card-block">
+				<h3 class="card-title">Embedded Systems Engg.</h3>
+				<p class="card-text">“Intellectual growth should commence at birth and cease only at death.”</p>
+				<a href="Subject.html" class="btn btn-primary">Get Notes</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<br><br><br><br>
+		
+		<div class="row">
+		  <div class="col-sm-4" id="first_card">
+			<div class="card">
+							<a href="Subject.html">	<svg viewBox="0 0 600 300">
+  <!-- Symbol-->
+  <symbol id="s-text4">
+    <text text-anchor="middle" x="50%" y="50%" dy=".35em">BM</text>
+  </symbol>
+  <!-- Duplicate symbols-->
+  <use class="text4" xlink:href="#s-text4"></use>
+  <use class="text4" xlink:href="#s-text4"></use>
+  <use class="text4" xlink:href="#s-text4"></use>
+  <use class="text4" xlink:href="#s-text4"></use>
+  <use class="text4" xlink:href="#s-text4"></use>
+</svg></a>
+			  <div class="card-block">
+				<h3 class="card-title">Bio Medical Engg.</h3>
+				<p class="card-text">“With great enthusiasm and determination you will master the art in your field.”</p>
+				<a href="Subject.html" class="btn btn-primary">Get Notes</a>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-sm-4">
+			<div class="card">
+			<a href="Subject.html">
+			<svg viewBox="0 0 600 300">
+  <!-- Symbol-->
+			  <symbol id="s-text5">
+			    <text text-anchor="middle" x="50%" y="50%" dy=".35em">IE</text>
+			  </symbol>
+			  <!-- Duplicate symbols-->
+			  <use class="text5" xlink:href="#s-text5"></use>
+			  <use class="text5" xlink:href="#s-text5"></use>
+			  <use class="text5" xlink:href="#s-text5"></use>
+			  <use class="text5" xlink:href="#s-text5"></use>
+			  <use class="text5" xlink:href="#s-text5"></use>
+			</svg>
+			</a>
+			  <div class="card-block">
+				<h3 class="card-title">Industrial Electronics Engg.</h3>
+				<p class="card-text">“You'll never know everything about anything,Keep learning.”</p>
+				<a href="Subject.html" class="btn btn-primary">Get Notes</a>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-sm-4">
+			<div class="card">
+			<a href="Subject.html">
+			<svg viewBox="0 0 600 300">
+			  <!-- Symbol-->
+			  <symbol id="s-text6">
+			    <text text-anchor="middle" x="50%" y="50%" dy=".35em">EV</text>
+			  </symbol>
+			  <!-- Duplicate symbols-->
+			  <use class="text6" xlink:href="#s-text6"></use>
+			  <use class="text6" xlink:href="#s-text6"></use>
+			  <use class="text6" xlink:href="#s-text6"></use>
+			  <use class="text6" xlink:href="#s-text6"></use>
+			  <use class="text6" xlink:href="#s-text6"></use>
+			</svg>
+			</a>
+		  <div class="card-block">
+				<h3 class="card-title">Electronics and Video Engg.</h3>
+				<p class="card-text">“The education of a man is never completed until he dies.” </p>
+				<a href="Subject.html" class="btn btn-primary">Get Notes</a>
+			  </div>
+			</div>
+		  </div>
+		</div>		
+		<br><br><br><br>		
+	</div>
+<div class="container ">	
+	<div class="card card-outline-primary mb-3 text-center quote1 "id="quote2">
+  <div class="card-block ">
+    <blockquote class="card-blockquote ">
+      <p class="quotes">Education is the key to unlock the golden door of freedom.</p>
+      <footer>George Washington.<cite title="Source Title"></cite></footer>
+    </blockquote>
+  </div>
+</div>
+	<br><br><br><br>
+</div>	
+		<hr>	
+	<div id="footer">
+	
+		<p><small><center>&copy; Copyright NeXT GEN<center><small></p>
+	
+	</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/tablesorter.min.js"></script>
+    <script src="assets/js/toolkit.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script>
+      // execute/clear BS loaders for docs
+      $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
+    </script>	
+	   <script>
+	   
+        // geting canvas by id c
+        var c = document.getElementById("c");
+        var ctx = c.getContext("2d");	
+        //making the canvas full screen
+        c.height = window.innerHeight;
+        c.width = window.innerWidth;
+
+        //chinese characters - taken from the unicode charset
+        var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+        //converting the string into an array of single characters
+        matrix = matrix.split("");
+
+        var font_size = 15;
+        var columns = c.width/font_size; //number of columns for the rain
+        //an array of drops - one per column
+        var drops = [];
+        //x below is the x coordinate
+        //1 = y co-ordinate of the drop(same for every drop initially)
+        for(var x = 0; x < columns; x=x+1)
+            drops[x] = 1; 
+
+        //drawing the characters
+        function draw()
+        {
+            //Black BG for the canvas
+            //translucent BG to show trail
+            ctx.fillStyle = "rgba(37, 40, 48, 0.15)";
+            ctx.fillRect(0, 0, c.width, c.height);
+
+            ctx.fillStyle = "#025Aed"; //green text
+            ctx.font = font_size + "px Jokerman";
+            //looping over drops
+            for(var i = 0; i < drops.length; i++)
+            {
+                //a random chinese character to print
+                var text = matrix[Math.floor(Math.random()*matrix.length)];
+                //x = i*font_size, y = value of drops[i]*font_size
+                ctx.fillText(text, i*font_size, drops[i]*font_size);
+
+                //sending the drop back to the top randomly after it has crossed the screen
+                //adding a randomness to the reset to make the drops scattered on the Y axis
+                if(drops[i]*font_size > c.height && Math.random() > 0.975)
+                    drops[i] = 0;
+
+                //incrementing Y coordinate
+                drops[i]++;
+            }
+        }
+        setInterval(draw, 35);        
+        </script>
+        <script>
+        if ( screen.width > 1600)
+        {
+            document.write('<style>#{ font-size: 2em; } </style>');
+        }
+        else if (screen.width <= 1600 && screen.width >= 1360)
+        {
+            document.write('<style>#centered h1 { font-size: 1.7em; } </style>');
+        }
+        else if (screen.width < 1360 && >= 1024)
+        {
+            document.write('<style>#centered h1 { font-size: 1.4em; } </style>');
+        }
+        else
+        {
+            document.write('<style>#centered h1 { font-size: 0.8em; } </style>');
+        }
+    </script>
+	
+  </body>
+</html>
+

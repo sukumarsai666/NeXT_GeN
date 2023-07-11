@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+	
+	<title>NeXT GEN</title>
+	<link rel="icon" type="image/icon" href="N4.ico">
+	
+	
+	<link href="assets/css/application.css" rel="stylesheet">
+	<link href="assets/css/toolkit-inverse.css" rel="stylesheet">
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Space+Mono" rel="stylesheet">
+	<link href="jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="http://static.jsbin.com/js/vendor/codemirror5/lib/codemirror.css?3.41.2">
+	
+	
+	<style>
+	
+	@font-face {
+    font-family: semiCode;
+    src: url("SourceCodePro-Light.otf") format("opentype");
+	}
+	
+	 body 
+	  {
+        width: 1px;
+        min-width: 100%;
+        *width: 100%;
+		background-color : white;	
+      }
+	  
+	  #form-search 
+	  {
+	  
+		float : right;
+		padding-top : 8px  !important;
+		padding-right : 20px  !important;
+	  
+	  }
+	  
+	  #btn_search 
+	  {
+		width : 260px !important;
+		position : relative;
+		right : -44px;
+		z-index : 0;
+		height : 37px !important;
+	  }
+	  
+	  #btn_search_real
+	  {
+		z-index : 1;
+	  }
+	  
+	  #btn_search_real :hover 
+	  {
+		color : #17AA1C;
+	  }
+	  
+	  #contols-btn {
+	  
+		width : 100%;
+		height : 45px;
+		background-color : #434857;
+	  
+	  }
+	   
+	  #btn-div {
+		
+		text-align : center;
+		padding-top : 5px;
+	  
+	  }
+	  
+	  .control-btn {
+	  
+		margin : 0px !important;
+		border-right : 1px #cccccc solid;
+		position : fixed !important;
+	  }
+	  
+	  textarea {
+		
+		color : #000333;
+		font-weight : 700;
+		font-size : 110%;
+		font-family : semiCode !important;
+		resize : none;
+		border: 1px solid #eee;
+	  }
+	  
+	  .Panel{
+		
+		width : 50%;
+		float : left;
+		border-top : none;
+	  }
+	  
+	   #footer
+	  {
+		width : 100%;
+		height : 24px;
+		background-color : #223344;
+		position : fixed;
+		bottom : 0;
+	  }
+	  
+	  small
+	  {
+		font-family:"Century Gothic";
+	  }
+	  
+	  #footer-text {
+		padding-top : 4px;
+	  }
+	  
+	  iframe{
+	  
+		border : none;
+		
+	  }
+	 
+	  .hidden{
+	  
+		display : none;
+	  
+	  }
+	  #Gap{
+	  	width: 100%;
+	  	height: 40px;
+	  	background-color: #434857;
+	  }
+	
+	</style>
+
+</head>
+
+<body>
+
+	 <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand navbar-brand-emphasized" href="index.html">
+          <span class="icon icon-leaf navbar-brand-icon"></span>
+          NeXT GEN
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        
+		
+		<ul class="nav navbar-nav">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li >
+            <a href="Subject.html">Courses</a>
+          </li>
+          <li class="active">
+            <a href="CodePlayer.html">Code Player</a>
+          </li>
+          <li >
+            <a href="About_Us.html">About Us</a>
+          </li>
+        </ul>
+	
+      </div>
+    </div>
+  </nav>
+  <div id="Gap"></div>
+  
+  <div id="contols-btn">
+	<div id="btn-div">
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-primary active" id="html" >
+				<input type="checkbox"  checked autocomplete="off"> HTML 
+			</label>
+			<label class="btn btn-primary" id="css">
+				<input type="checkbox" autocomplete="off"> CSS
+			</label>
+			<label id="javascript" class="btn btn-primary">
+				<input type="checkbox" autocomplete="off"> JavaScript
+			</label>
+			<label id="output" class="btn btn-primary active">
+				<input type="checkbox" autocomplete="off"> Output
+			</label>
+		</div>
+		
+  </div>
+  </div>
+  
+
+	<textarea id="htmlPanel" spellcheck="false" class="Panel lined">
+&lt;html>
+&lt;head>
+  &lt;meta charset="utf-8">
+  &lt;meta name="viewport" content="width=device-width">
+  &lt;title>JS Bin&lt;/title>
+&lt;/head>
+&lt;body>
+
+&lt;/body>
+&lt;/html>
+</textarea>
+	<textarea id="cssPanel" autocomplete="false" spellcheck="false" class="Panel hidden">p{color : red;}</textarea>
+	<textarea id="javascriptPanel" autocomplete="false" spellcheck="false" class="Panel hidden">alert("Hello How are you!!.")</textarea>
+	<iframe id="outputPanel" class="Panel"></iframe>
+  
+  
+  
+  <div id="footer">
+	
+		<div id="footer-text"><small style="color : white"><center>&copy; Copyright NeXT GEN<center><small></div>
+	
+	</div>
+	
+	<script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/tablesorter.min.js"></script>
+    <script src="assets/js/toolkit.js"></script>
+    <script src="assets/js/application.js"></script>
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="jquery-linedtextarea.js"></script>
+
+<script src="http://static.jsbin.com/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="http://jsbin.com/bin/user.js?bf2"></script>
+<script src="http://static.jsbin.com/js/prod/jsbin-3.41.2.min.js"></script>
+<script async defer src="http://jsbin.com/bin/start.js?16635"></script>
+
+	<script type="text/javascript">
+	
+	$(function() {
+	$(".lined").linedtextarea(
+		{selectedLine: 1}
+	);
+});
+	
+	var Activepanel;
+	var hiddenpanel;
+	
+	$(".btn").click(function(){
+	
+		var panelId = $(this).attr("id") + "Panel" ;
+		
+		
+		if (panelId != "htmlPanel" || $(this).attr("id") != "output") ;
+		{
+			if($(this).hasClass("active")){
+			
+				$("#" + panelId).addClass("hidden");
+	
+		
+			}else{
+		
+				$("#" + panelId).removeClass("hidden");		
+		
+			}
+
+		
+			hiddenpanel = $(".hidden").length;
+			
+			Activepanel = 4 - hiddenpanel;
+		
+			$(".Panel").width(($(window).width() / Activepanel )-25);
+		}
+	
+	});
+	
+	$( window ).resize(function() {
+		
+		$(".Panel").width(($(window).width() / Activepanel )-25);
+		
+	});
+	
+	
+    $(".Panel").height($(window).height() - $("nav").height() - $("#btn-div").height() - 40);
+	
+	$(".Panel").width(($(window).width() / 2 )-25);
+	
+	$("#outputPanel").contents().find("html").html($("#htmlPanel").val());
+	
+	
+	
+	
+	$("textarea").on('change keyup paste',function(){
+		
+		var htmlCode =  $("#htmlPanel").val();
+	
+	var headCloseIndex = htmlCode.indexOf("</head>");
+	
+	var StartCode = htmlCode.slice(0,headCloseIndex);
+	
+	var EndCode = htmlCode.slice(headCloseIndex,htmlCode.length);
+	
+	var cssCode = $("#cssPanel").val();
+	
+	
+	var finalCode = StartCode + "<style>" + cssCode + "</style>" + EndCode;
+
+		
+	$("#outputPanel").contents().find("html").html(finalCode);
+		
+		/*var jsCode = document.getElementById("#javascriptPanel").Value();
+		
+		document.getElementById("#outputPanel").contentWindow.eval(jsCode);
+	*/
+	});
+	
+	</script>
+  
+</body>
+
+</html>

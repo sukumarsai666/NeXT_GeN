@@ -1,0 +1,7 @@
+Branch + Year + Subject + '.pdf'
+EX: CPIMaths.pdf  (CP  -  I(i)  - Maths )
+
+if it is Maths two then
+
+EX:
+	CPIMaths-II.pdf 

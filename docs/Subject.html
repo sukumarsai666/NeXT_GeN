@@ -1,0 +1,995 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      
+        NeXT GEN
+      
+    </title>
+    <link rel="icon" type="image/icon" href="N4.ico">
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+    
+      <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
+	  
+	  
+    
+    
+    <link href="assets/css/application.css" rel="stylesheet">
+
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+	  
+	  @import url(http://fonts.googleapis.com/css?family=Concert+One);
+	  
+	  
+      body {
+        width: 1px;
+        min-width: 100%;
+        *width: 100%;
+      }
+	  
+	 
+	    canvas
+    {
+       width : 100%;
+       height : 400px;
+       margin: 0 0 0px 0;
+       padding: 0;
+       display:block;
+       border-radius : 0 0 75% 75%;
+    }
+    
+    #title3 
+    { 
+      position : relative;
+      top : -325px;
+      font-family: "Avant Garde", Avantgarde, "Century Gothic", 'Sansita', 'Concert One', 'Century Gothic';
+      font-size : 75px;
+      text-align : center;
+    }
+
+ 
+ .deepshadow {
+    color: #e0dfdc;
+    letter-spacing: .1em;
+    text-shadow: 
+      0 -1px 0 #ffffff, 
+      0 1px 0 orange, 
+      0 2px 0 green, 
+      0 3px 0 blue, 
+      0 4px 0 purple, 
+      0 5px 0 #262626, 
+      0 6px 0 #242424, 
+      0 7px 0 #222, 
+      0 8px 0 #202020, 
+      0 9px 0 #1e1e1e, 
+      0 10px 0 #1c1c1c, 
+      0 11px 0 #1a1a1a, 
+      0 12px 0 #181818, 
+      0 13px 1px silver, 
+      0 14px 0 purple, 
+      0 22px 30px rgba(0, 0, 0, 0.9);
+  }
+
+
+  /* Main styles */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+.text {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+  font: 250px Open Sans, Impact;
+  text-transform: uppercase;
+}
+.text:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+.text2 {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke2 6s infinite linear;
+  animation: stroke 6s infinite linear;
+  font: 250px Open Sans, Impact;
+  text-transform: uppercase;
+}
+.text2:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text2:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text2:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text2:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text2:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke2 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke2 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+  
+  .text3 {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke3 6s infinite linear;
+  animation: stroke 6s infinite linear;
+  font: 250px Open Sans, Impact;
+  text-transform: uppercase;
+}
+.text3:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text3:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text3:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text3:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text3:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke3 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke3 {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+svg {
+display: block;
+margin-top:300px; 
+position: absolute;
+top: 28%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.filler {
+background: #20B7AF;
+position: absolute;
+bottom: 30%;
+top: 70%;
+left: 0;
+right: 0;
+}
+	 
+	  #footer{
+    
+    width : 100%;
+    height : 45px;
+    background-color : #223344;
+    position : absolute;
+    
+    }
+    .button2{
+    border-radius: 30px !important;
+    transition-duration: 1s;
+}
+
+.button2:hover{
+    border-radius: 5px !important;
+    
+}
+/*BUTTON2*/
+
+	  
+    </style>
+  </head>
+
+
+<body>
+  
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand navbar-brand-emphasized" href="index.html">
+          <span class="icon icon-leaf navbar-brand-icon"></span>
+          NeXT GEN
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        
+		
+		<ul class="nav navbar-nav">
+          <li >
+            <a href="index.html">Home</a>
+          </li>
+          <li >
+            <a href="" class="active">Courses</a>
+          </li>
+          <li >
+            <a href="CodePlayer.html">Code Player</a>
+          </li>
+          <li  >
+            <a href="About_Us.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <canvas id="c">
+ 
+ </canvas>
+ 
+ 
+<h2 class="deepshadow deallogo" id="title3">Ne<span class="name">X</span>T G<span>E</span>N</h2>
+
+<h5 id="title3" style="font-size: 200% !important;padding-top:10% !important" >THe Door to the Future</h5>
+
+<div class="filler"></div>
+
+
+<svg width="200" height="200">
+
+    <filter id="innerShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+        <feOffset in="blur" dx="2.5" dy="2.5"/>
+    </filter>
+
+    <g>
+        <circle id="shadow" style="fill:rgba(0,0,0,0.1)" cx="97" cy="100" r="87" filter="url(#innerShadow)"></circle>
+        <circle id="circle" style="stroke: #FFF; stroke-width: 12px; fill:#20B7AF" cx="100" cy="100" r="80"></circle>
+    </g>
+    <g>
+        <line x1="100" y1="100" x2="100" y2="55" transform="rotate(80 100 100)" style="stroke-width: 3px; stroke: #fffbf9;" id="hourhand">
+            <animatetransform attributeName="transform"
+                              attributeType="XML"
+                              type="rotate"
+                              dur="43200s"
+                              repeatCount="indefinite"/>
+        </line>
+        <line x1="100" y1="100" x2="100" y2="40" style="stroke-width: 4px; stroke: #fdfdfd;" id="minutehand">
+            <animatetransform attributeName="transform"
+                              attributeType="XML"
+                              type="rotate"
+                              dur="3600s"
+                              repeatCount="indefinite"/>
+        </line>
+        <line x1="100" y1="100" x2="100" y2="30" style="stroke-width: 2px; stroke: #C1EFED;" id="secondhand">
+            <animatetransform attributeName="transform"
+                              attributeType="XML"
+                              type="rotate"
+                              dur="60s"
+                              repeatCount="indefinite"/>
+        </line>
+    </g>
+    <circle id="center" style="fill:#128A86; stroke: #C1EFED; stroke-width: 2px;" cx="100" cy="100" r="3"></circle>
+</svg>
+
+<div class="container text-center ">
+
+<div >
+<label><h3>Branch : </h3></label>
+  <select class="custom-select" id="Branch" >
+  <option>CP</option>
+  <option>CN</option>
+  <option>ES</option>
+  <option>BM</option>
+  <option>IE</option>
+  <option>EV</option>
+
+</select>
+</div>
+
+<label><h3>SEM :</h3></label>
+
+  <select class="custom-select" id="SEM">
+  <option>I</option>
+  <option>II</option>
+  <option>III</option>
+  <option>IV</option>
+  <option>V</option>
+  <option>VI</option>
+</select>
+
+<div class=" group" id="CPsI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="CPI">
+  <option>Maths</option>
+  <option>Physics</option>
+  <option>Chemistry</option>
+  <option>ECD(BE)</option>
+  <option>BEE</option>
+  <option>English</option>
+
+</select>
+</div>
+<div  class=" group" id="CPsII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="CPII">
+  <option>Maths-II</option>
+  <option>Physics-II</option>
+  <option>Chemistry-II</option>
+  <option>ET</option>
+  <option>ED</option>
+  <option>English-II</option>
+
+
+</select>
+</div>
+<div  class=" group" id="CPsIII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="CPIII">
+  <option>Maths-III</option>
+  <option>EC</option>
+  <option>NA</option>
+  <option>DE</option>
+  <option>CDT</option>
+  <option>UNIC & C</option>
+  
+
+</select>
+</div>
+<div class=" group" id="CPsIV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="CPIV" >
+  <option>Maths-IV</option>
+  <option>LICA</option>
+  <option>PDC</option>
+  <option>MC</option>
+  <option>C++</option>
+  <option>CA</option>
+
+</select>
+</div>
+<div class=" group" id="CPsV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="CPV">
+  <option>CHN</option>
+  <option>IT</option>
+  <option>MC</option>
+  <option>RDBMS</option>
+  <option>OS</option>
+  <option>MTE</option>
+
+</select>
+</div>
+<div  class=" group" id="CPsVI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="CPVI">
+  <option>.NET</option>
+  <option>IME</option>
+  <option>MC</option>
+  <option>DICD</option>
+  <option>SA</option>
+  <option>CS</option>
+</select>
+</div>
+
+
+<div class=" group" id="CNsI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="CNI">
+  <option>Mahs</option>
+  <option>Physics</option>
+  <option>Chemistry</option>
+  <option>ECD(BE)</option>
+  <option>BEE</option>
+  <option>English</option>
+
+</select>
+</div>
+<div  class=" group" id="CNsII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="CNII">
+  <option>Maths-II</option>
+  <option>Physics-II</option>
+  <option>Chemistry-II</option>
+  <option>ET</option>
+  <option>ED</option>
+  <option>English-II</option>
+
+
+</select>
+</div>
+<div  class=" group" id="CNsIII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="CNIII">
+  <option>Maths-III</option>
+  <option>EC</option>
+  <option>NA</option>
+  <option>DE</option>
+  <option>CDT</option>
+  <option>UNIC & C</option>
+  
+
+</select>
+</div>
+<div class=" group" id="CNsIV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="CNIV" >
+  <option>Maths-IV</option>
+  <option>LICA</option>
+  <option>PDC</option>
+  <option>MC</option>
+  <option>C++</option>
+  <option>CA</option>
+
+</select>
+</div>
+<div class=" group" id="CNsV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="CNV">
+  <option>CHN</option>
+  <option>IT</option>
+  <option>MC</option>
+  <option>RDBMS</option>
+  <option>OS</option>
+  <option>MTE</option>
+
+</select>
+</div>
+<div  class=" group" id="CNsVI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="CNVI">
+  <option>.NET</option>
+  <option>IME</option>
+  <option>MC</option>
+  <option>DICD</option>
+  <option>SA</option>
+  <option>CS</option>
+</select>
+</div>
+
+
+<div class=" group" id="ESsI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="ESI">
+  <option>Math</option>
+  <option>Physics</option>
+  <option>Chemistry</option>
+  <option>ECD(BE)</option>
+  <option>BEE</option>
+  <option>English</option>
+
+</select>
+</div>
+<div  class=" group" id="ESsII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="ESII">
+  <option>Maths-II</option>
+  <option>Physics-II</option>
+  <option>Chemistry-II</option>
+  <option>ET</option>
+  <option>ED</option>
+  <option>English-II</option>
+
+
+</select>
+</div>
+<div  class=" group" id="ESsIII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="ESIII">
+  <option>Math-III</option>
+  <option>EC</option>
+  <option>NA</option>
+  <option>DE</option>
+  <option>CDT</option>
+  <option>UNIC & C</option>
+  
+
+</select>
+</div>
+<div class=" group" id="ESsIV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="ESIV" >
+  <option>Maths-IV</option>
+  <option>LICA</option>
+  <option>PDC</option>
+  <option>MC</option>
+  <option>C++</option>
+  <option>CA</option>
+
+</select>
+</div>
+<div class=" group" id="ESsV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="ESV">
+  <option>CHN</option>
+  <option>IT</option>
+  <option>MC</option>
+  <option>RDBMS</option>
+  <option>OS</option>
+  <option>MTE</option>
+
+</select>
+</div>
+<div  class=" group" id="ESsVI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="ESVI">
+  <option>.NET</option>
+  <option>IME</option>
+  <option>MC</option>
+  <option>DICD</option>
+  <option>SA</option>
+  <option>CS</option>
+</select>
+</div>
+
+
+<div class=" group" id="BMsI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="BMI">
+  <option>Mths</option>
+  <option>Physics</option>
+  <option>Chemistry</option>
+  <option>ECD(BE)</option>
+  <option>BEE</option>
+  <option>English</option>
+
+</select>
+</div>
+<div  class=" group" id="BMsII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="BMII">
+  <option>Maths-II</option>
+  <option>Physics-II</option>
+  <option>Chemistry-II</option>
+  <option>ET</option>
+  <option>ED</option>
+  <option>English-II</option>
+
+
+</select>
+</div>
+<div  class=" group" id="BMsIII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="BMIII">
+  <option>Maths-III</option>
+  <option>EC</option>
+  <option>NA</option>
+  <option>DE</option>
+  <option>CDT</option>
+  <option>UNIC & C</option>
+  
+
+</select>
+</div>
+<div class=" group" id="BMsdIV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="BMIV" >
+  <option>Maths-IV</option>
+  <option>LICA</option>
+  <option>PDC</option>
+  <option>MC</option>
+  <option>C++</option>
+  <option>CA</option>
+
+</select>
+</div>
+<div class=" group" id="BMsV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="BMV">
+  <option>CHN</option>
+  <option>IT</option>
+  <option>MC</option>
+  <option>RDBMS</option>
+  <option>OS</option>
+  <option>MTE</option>
+
+</select>
+</div>
+<div  class=" group" id="BMsVI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="BMVI">
+  <option>.NET</option>
+  <option>IME</option>
+  <option>MC</option>
+  <option>DICD</option>
+  <option>SA</option>
+  <option>CS</option>
+</select>
+</div>
+
+<div class=" group" id="IEsI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="IEI">
+  <option>Mats</option>
+  <option>Physics</option>
+  <option>Chemistry</option>
+  <option>ECD(BE)</option>
+  <option>BEE</option>
+  <option>English</option>
+
+</select>
+</div>
+<div  class=" group" id="IEsII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="IEII">
+  <option>Maths-II</option>
+  <option>Physics-II</option>
+  <option>Chemistry-II</option>
+  <option>ET</option>
+  <option>ED</option>
+  <option>English-II</option>
+
+
+</select>
+</div>
+<div  class=" group" id="IEsIII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="IEIII">
+  <option>Maths-III</option>
+  <option>EC</option>
+  <option>NA</option>
+  <option>DE</option>
+  <option>CDT</option>
+  <option>UNIC & C</option>
+  
+
+</select>
+</div>
+<div class=" group" id="IEsIV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="IEIV" >
+  <option>Maths-IV</option>
+  <option>LICA</option>
+  <option>PDC</option>
+  <option>MC</option>
+  <option>C++</option>
+  <option>CA</option>
+
+</select>
+</div>
+<div class=" group" id="IEsV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="IEV">
+  <option>CHN</option>
+  <option>IT</option>
+  <option>MC</option>
+  <option>RDBMS</option>
+  <option>OS</option>
+  <option>MTE</option>
+
+</select>
+</div>
+<div  class=" group" id="IEsVI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="IEVI">
+  <option>.NET</option>
+  <option>IME</option>
+  <option>MC</option>
+  <option>DICD</option>
+  <option>SA</option>
+  <option>CS</option>
+</select>
+</div>
+
+<div class=" group" id="EVsI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="EVI">
+  <option>M</option>
+  <option>Phics</option>
+  <option>Chemistry</option>
+  <option>ECD</option>
+  <option>BEE</option>
+  <option>English</option>
+
+</select>
+</div>
+<div  class=" group" id="EVsII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="EVII">
+  <option>Maths-II</option>
+  <option>Physics-II</option>
+  <option>Chemistry-II</option>
+  <option>ET</option>
+  <option>ED</option>
+  <option>English-II</option>
+
+
+</select>
+</div>
+<div  class=" group" id="EVsIII">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="EVIII">
+  <option>Maths-III</option>
+  <option>EC</option>
+  <option>NA</option>
+  <option>DE</option>
+  <option>CDT</option>
+  <option>UNIC & C</option>
+  
+
+</select>
+</div>
+<div class=" group" id="EVsIV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select" id="EVIV" >
+  <option>Maths-IV</option>
+  <option>LICA</option>
+  <option>PDC</option>
+  <option>MC</option>
+  <option>C++</option>
+  <option>CA</option>
+
+</select>
+</div>
+<div class=" group" id="EVsV">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="EVV">
+  <option>CHN</option>
+  <option>IT</option>
+  <option>MC</option>
+  <option>RDBMS</option>
+  <option>OS</option>
+  <option>MTE</option>
+
+</select>
+</div>
+<div  class=" group" id="EVsVI">
+<label><h3>Subject : </h3></label>
+  <select class="custom-select"  id="EVVI">
+  <option>.NET</option>
+  <option>IME</option>
+  <option>MC</option>
+  <option>DICD</option>
+  <option>SA</option>
+  <option>CS</option>
+</select>
+</div>
+<button type="button" class="btn btn-lg btn-pill btn-primary button2" id="Sub_btn" >Submit</button>
+<br><br>
+
+<object data="" style="width: 100%; height: 1200px; display: block;" id="PDF" ></object>
+
+ </div>
+
+ <div id="footer">
+  
+    <p><small><center>&copy; Copyright NeXT GEN<center><small></p>
+  
+  </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/tablesorter.min.js"></script>
+    <script src="assets/js/toolkit.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script>
+
+     $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
+    </script>
+  
+
+  
+  
+     <script>
+     
+        // geting canvas by id c
+        var c = document.getElementById("c");
+        var ctx = c.getContext("2d");
+
+    
+    
+        //making the canvas full screen
+        c.height = window.innerHeight;
+        c.width = window.innerWidth;
+
+        //chinese characters - taken from the unicode charset
+        var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+        //converting the string into an array of single characters
+        matrix = matrix.split("");
+
+        var font_size = 15;
+        var columns = c.width/font_size; //number of columns for the rain
+        //an array of drops - one per column
+        var drops = [];
+        //x below is the x coordinate
+        //1 = y co-ordinate of the drop(same for every drop initially)
+        for(var x = 0; x < columns; x=x+1)
+            drops[x] = 1; 
+
+        //drawing the characters
+        function draw()
+        {
+            //Black BG for the canvas
+            //translucent BG to show trail
+            ctx.fillStyle = "rgba(37, 40, 48, 0.15)";
+            ctx.fillRect(0, 0, c.width, c.height);
+
+            ctx.fillStyle = "#025Aed"; //green text
+            ctx.font = font_size + "px Jokerman";
+            //looping over drops
+            for(var i = 0; i < drops.length; i++)
+            {
+                //a random chinese character to print
+                var text = matrix[Math.floor(Math.random()*matrix.length)];
+                //x = i*font_size, y = value of drops[i]*font_size
+                ctx.fillText(text, i*font_size, drops[i]*font_size);
+
+                //sending the drop back to the top randomly after it has crossed the screen
+                //adding a randomness to the reset to make the drops scattered on the Y axis
+                if(drops[i]*font_size > c.height && Math.random() > 0.975)
+                    drops[i] = 0;
+
+                //incrementing Y coordinate
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 35);
+
+        window.onload=function() {
+
+
+var hands = [];
+hands.push(document.querySelector('#secondhand > *'));
+hands.push(document.querySelector('#minutehand > *'));
+hands.push(document.querySelector('#hourhand > *'));
+
+var cx = 100;
+var cy = 100;
+
+function shifter(val) {
+  return [val, cx, cy].join(' ');
+}
+
+var date = new Date();
+var hoursAngle = 360 * date.getHours() / 12 + date.getMinutes() / 2;
+var minuteAngle = 360 * date.getMinutes() / 60;
+var secAngle = 360 * date.getSeconds() / 60;
+
+hands[0].setAttribute('from', shifter(secAngle));
+hands[0].setAttribute('to', shifter(secAngle + 360));
+hands[1].setAttribute('from', shifter(minuteAngle));
+hands[1].setAttribute('to', shifter(minuteAngle + 360));
+hands[2].setAttribute('from', shifter(hoursAngle));
+hands[2].setAttribute('to', shifter(hoursAngle + 360));
+
+for(var i = 1; i <= 12; i++) {
+  var el = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  el.setAttribute('x1', '100');
+  el.setAttribute('y1', '30');
+  el.setAttribute('x2', '100');
+  el.setAttribute('y2', '40');
+  el.setAttribute('transform', 'rotate(' + (i*360/12) + ' 100 100)');
+  el.setAttribute('style', 'stroke: #ffffff;');
+  document.querySelector('svg').appendChild(el);
+}
+};
+         $(document).ready(function () {
+
+          $('#PDF').hide();
+          $('.group').hide();
+          $('#CPsI').show();
+         
+           $('#Branch').change(function () { 
+              $('.group').hide();
+              var value1= $(this).val();
+              var val1= $('#SEM').val();
+              $('#'+value1+'s'+val1).show();
+              
+
+          
+          });
+           $('#SEM').change(function () {
+            $('.group').hide();
+            var value1= $('#Branch').val();
+            var val1= $('#SEM').val();
+            var view = '#'+value1+'s'+ val1;
+            $(view).show();
+            });
+
+            $('#Sub_btn').click(function(){
+
+                var Branch=$('#Branch').val();
+                var SEM=$('#SEM').val();
+                var Subject=$('#'+Branch+SEM).val();
+                var Data= Branch+SEM + Subject + '.pdf';
+                $('#PDF').attr("data",Data);
+                $('#PDF').show();
+
+
+            });
+
+        });
+             
+
+        </script>
+              
+  </body>
+</html>
+
